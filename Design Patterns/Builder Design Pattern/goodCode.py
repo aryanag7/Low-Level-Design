@@ -61,6 +61,14 @@ def main():
         .set_sunroof(True)
         .build()
     )
+
+    """
+    Alternatively you can also do,  car = CarBuilder()\
+    .set_brand("Toyota")\
+    .set_model("Camry")\
+    .build()
+    """
+  
     car2 = (
         CarBuilder()
         .set_brand("Maruti")
@@ -96,4 +104,28 @@ or reset the builder to start fresh.
 Meal Order Example: 
 Selecting a meal with multiple options that you can customize step by step. 
 Burger with different toppings, sides, and drinks.
+"""
+
+"""
+Builder Pattern Use Cases:
+
+1. Creating a complex Car object:
+  HttpRequestBuilder()
+  .set_method("POST")
+  .set_url("https://api.example.com/user")
+  .set_headers({"Authorization": "Bearer xyz"})
+  .set_body({"name": "Aryan"})
+  .build()
+
+2. Building an Email message:
+   EmailBuilder()
+     .set_to("aryan@example.com")
+     .set_subject("Builder Pattern Example")
+     .set_body("Hi Aryan, here's your summary.")
+
+3. Constructing a SQL query:
+   SqlQueryBuilder()
+     .select("name, age")
+     .from_table("users")
+     .where("age > 18")
 """

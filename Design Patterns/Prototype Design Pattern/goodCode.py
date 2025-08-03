@@ -1,7 +1,9 @@
+from abc import ABC,abstractmethod
 import copy
 
 # Prototype interface
-class Prototype:
+@abstractmethod
+class Prototype(ABC):
     def clone(self):
         pass
 

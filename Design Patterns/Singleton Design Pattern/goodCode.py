@@ -25,18 +25,6 @@ db2 = DatabaseConnection()
 print(db1 is db2)  # True, both refer to the same instance
 
 
-# In the above code, we're creating multiple instances of the DatabaseConnection class.
-
-# Each instance has its own independent connection to the database.
-# This could lead to inconsistency in the following ways:
-
-# 1. **Multiple Instances**: Multiple database connections are opened, which can waste resources.
-
-# 2. **Inconsistent Access**: One instance might be reading from the database while another writes, leading to conflicting states.
-
-# 3. **No Global Access Point**: There is no central point to access or manage the connection, leading to potential errors where one part of the program could use one connection, while another part uses a different one, causing data inconsistency.
-
-
 
 """
 In the Singleton pattern, we ensure that only one instance of a class is created.

@@ -42,7 +42,7 @@ bakery.bake_item(cake)
 
 bakery.bake_item(frozenitem)
 """
-It violates LSP: FrozenItem is not really a usable substitute for BakeryItem.
+It violates LSP: FrozenItem is not really a usable substitute for BakeryItem (Parent class).
 """
 
 """

@@ -17,6 +17,8 @@ class FaxMachine(ABC):
 class BasicPrinter(Printer):
     def print(self):
         print("Printing only.")
+
+    #In this context, a client just means the code (or class) that uses another class or interface. (consumer in this case)
     
     #client here BasicPrinter not forced to implement things that it doesnt require or depend upon
 

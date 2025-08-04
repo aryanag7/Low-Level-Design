@@ -38,6 +38,14 @@ processor.execute_payment(amount)
 processor.set_payment_method(PayPalPayment())
 processor.execute_payment(amount)
 
+"""
+The context object (PaymentProcessor) interacts with the strategy object (CreditCardPayment, PayPalPayment) to perform the task (payment processing).
+
+The context doesn't create new objects for every strategy, but it interacts with different strategies by calling the process_payment() method.
+
+Even though the context object (PaymentProcessor) is the same, it communicates with different objects (strategies) to execute different behaviors.
+"""
+
 
 """
 Good Code (With Strategy Pattern):
@@ -62,4 +70,10 @@ USE CASE:- Tax Calculation Strategy:
 - Each tax rule (e.g., USA, Canada, GST) is encapsulated in its own strategy, making the system flexible and maintainable.
 - The order class can easily swap tax strategies at runtime, allowing for dynamic and context-specific tax calculations.
 - Adding new tax strategies (e.g., for different countries or product types) is simple without modifying existing code.
+
+- Sorting Strategy:
+- Uses the Strategy Pattern to sort a list of items based on different criteria (e.g., by price, by rating).
+- Each sorting strategy (e.g., PriceSortStrategy, RatingSortStrategy) implements a common interface, allowing the context (e.g., ItemList) to use any sorting strategy dynamically.
+- The context can easily switch between sorting strategies at runtime, providing flexibility in how items are sorted.
+- Adding new sorting strategies (e.g., by name, by date) is straightforward without altering existing code.
 """

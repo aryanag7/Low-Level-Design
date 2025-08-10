@@ -30,3 +30,12 @@ Possible future extensions:
 - Observer pattern to notify players or spectators when game state changes
 - State pattern to manage different stages of the game (Setup, Playing, Finished)
 """
+
+
+# Observer Pattern Note:
+# We can use Observer here so that external components (like a logger, UI, or stats tracker)
+# can be "subscribed" to the game and get notified whenever important events happen 
+# (e.g., a move made, game won, or drawn) without changing the game logic itself.
+# This makes the design more modular, easy to extend, and follow the open/closed principle.
+# A new Subject class can inherit from TicTacToe, add observer management methods 
+# (attach, detach, notify), and still use all TicTacToe's game logic.

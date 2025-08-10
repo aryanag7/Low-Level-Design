@@ -9,7 +9,7 @@ class TicTacToe(BoardGames):
     def __init__(self):
         self.board = Board(3,3)
         self.playerA = PlayerFactory.create_player("Aryan",Symbol.X,"human")
-        self.playerB= PlayerFactory.create_player("Vedangi",Symbol.O,"human")
+        self.playerB= PlayerFactory.create_player("AI",Symbol.O,"ai")
         self.currPlayer = self.playerA
         self.currGameState = GamesState.IN_PRPGRESS
 
